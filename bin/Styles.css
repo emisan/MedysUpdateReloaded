@@ -1,0 +1,174 @@
+
+
+/*
+ StyleSheet-Angaben, die (zur aktuellen Java 8_72) nicht zusammen auftreten können ( da die letzte Angabe die vorherige übersteuert )
+ 
+ - innershadow + dropshadow
+ 
+ */
+ 
+/* ---------------------------  KLASSEN */
+ 
+.progress-bar 
+{
+	-fx-fill: GRAY;
+   	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );	 
+	-fx-indeterminate-bar-escape: true; 	 
+	-fx-indeterminate-bar-flip: true; 	 
+	-fx-indeterminate-bar-animation-time: 0.5;
+}
+
+.progress-bar .bar 
+{
+	-fx-background-color: green;
+}
+
+.progress-indicator 
+{
+	-fx-progress-color: white;
+	
+	/* top, right, bottom, left
+	
+	   ProgressIndicator befindet sich RELATIVE
+	   zu progressMessageAndButtons-VBox
+	   
+	   ProgressIndicator auf Grund von Re-Positionierung
+	   
+	   der UpdateMessage-Textanzeigen, neu zentrieren
+	   
+	   hier muss man mit POSITIVEN-Werten arbeiten, da Komponente in
+	   anderer Komponente liegt !! 
+	   
+	   Positiver-Wert verschiebt je nach Richtungswert ENTGEGENGESETZT
+	   der Standard Java-Komponentenpositionierung in Java-Fenstern !!!!
+	*/
+	
+	-fx-padding: 0 0 0 15;
+}
+
+.button 
+{
+	-fx-font-size:14px;
+	-fx-text-fill: WHITE;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0.2,0,0.5,0.6) , 5, 0.2 , 0 , 1 );
+}
+
+.button:hover 
+{
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+#medysVersionsNummernTextField {
+	-fx-width: 50px;
+	-fx-height: 20px;
+	-fx-background-color: linear-gradient(#FFFFFF, #FFFFAA);
+    -fx-effect: dropshadow( three-pass-box , rgba(0.2,0,0.5,0.6) , 5, 0.2 , 0 , 1 );
+}
+
+.root {
+	-fx-font-size: 16 px;
+	-fx-font-family: "Arial";
+	-fx-background-image: url("background.jpg");
+}
+
+/* ---------------------------  ID's */
+
+#downloadableVersion 
+{
+	-fx-fill: WHITE;
+	-fx-effect: dropshadow( three-pass-box , rgba(10,10,10,0.6) , 10, 0.2 , 0 , 1 );
+}
+
+#downloadProgressMessage_Style
+{
+	/* siehe auch Klasse .progress-indicator für negative Werte-Vergabe */
+	
+	-fx-padding: 40 0 0 0; 
+}
+
+#JFXTextLink_Style  
+{
+	-fx-fill: ANTIQUEWHITE;
+}
+
+#movePosition_progressButtonBox_beforeDownload
+{
+	/* top, right, bottom, left */
+	-fx-padding: 0 0 10 -20;
+}
+
+#moveProgressComponentsBox_Finished_Download_Style
+{
+	/* top, right, bottom, left
+	
+	   ProgressIndicator befindet sich RELATIVE
+	   zu progressMessageAndButtons-VBox
+	   
+	   Progressbar auf Grund von Re-Positionierung
+	   
+	   der UpdateMessage-Textanzeigen, neu zentrieren
+	   
+	   hier muss man mit POSITIVEN-Werten arbeiten, da Komponente in
+	   anderer Komponente liegt !! 
+	   
+	   Positiver-Wert verschiebt je nach Richtungswert ENTGEGENGESETZT
+	   der Standard Java-Komponentenpositionierung in Java-Fenstern !!!!
+	*/
+	
+	-fx-padding: 20 0 0 0; 
+}
+
+
+#updateHyperlinksVBox_Style 
+{
+	/* padding: top, right, bottom, left
+	
+	   diese VBox liegt RELATIVE zum updateMessageLayout
+	 */
+	
+	-fx-padding:5 20 10 60;
+	
+ 	/* http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html#typeeffect  */
+	
+	/* 	-fx-effect: dropshadow( three-pass-box , rgba(10,10,10,0.6) , 10, 0.2 , 0 , 1 ); */
+}
+
+#updateMessageLayout_Startup_Style
+{
+	/* padding: top, right, bottom, left */
+	
+	-fx-padding: 20 0 0 20;
+}
+
+
+#updateMessageLayout_Finished_Style
+{
+	/* padding: top, right, bottom, left */
+	
+	-fx-padding: 40 0 0 0;
+}
+
+#updateInProgressText_Style 
+{
+   -fx-fill: black;
+   
+   /* http://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html#typeeffect  */
+	
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#progressText_Style 
+{
+   -fx-font-size: 14px;
+   -fx-fill: ANTIQUEWHITE;
+}
+
+#progressText_finished_Style 
+{
+   -fx-font-size: 14px;
+   -fx-fill: WHITE;
+   -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
