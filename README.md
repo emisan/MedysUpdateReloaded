@@ -3,8 +3,8 @@ Upload-Routine for downloading update files
 
 This project was formerly for downloading updates from a dedicated server (medys FTP).
 
-With a little modification it can be used for any downloading-routine to receive files from a certain folder of a ftp-server or 
-from another URI.
+With a little modification it can be used for any downloading-routine to receive files from a certain folder from a ftp-server or 
+another URI.
 
 <b>This project needs following JAR-libraries in a new projects build path</b>:
 <ul>
